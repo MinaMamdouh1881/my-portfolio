@@ -4,7 +4,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaVideo } from "react-icons/fa6";
 import { useState } from "react";
-import Button from "./Button";
 
 function Works() {
   const [all, setAll] = useState(false);
