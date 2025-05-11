@@ -30,10 +30,10 @@ function NavigationBar() {
 
   const links = [
     { text: "Home", id: "home", icon: FiGrid, href: "#home" },
-    { text: "About_Me", id: "about-me", icon: FiUser, href: "#about-me" },
+    { text: "About Me", id: "about-me", icon: FiUser, href: "#about-me" },
     { text: "Skills", id: "skills", icon: FiCode, href: "#skills" },
     { text: "Works", id: "works", icon: FiMonitor, href: "#works" },
-    { text: "contact", id: "contact", icon: FiMail, href: "#contact" }, // Changed "Contact" to "contact" to match the active state
+    { text: "Contact", id: "contact", icon: FiMail, href: "#contact" },
   ];
 
   return (
@@ -41,7 +41,8 @@ function NavigationBar() {
       {links.map(({ id, text, icon: Icon, href }) => (
         <li
           key={id}
-          className={`after-nav after:content-["${text}"] ${
+          data-text={text}
+          className={`after-nav after:content-[attr(data-text)] ${
             active === id ? "bg-[#fff]" : ""
           }`}
         >
